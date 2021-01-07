@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
+This is a dashboard to view the online super store sales data in a graph, piechart and table format to make business sense of unstructured data. 
+The bar chart represents monthly sales category wise. 
+Pie chart represents sales for sub categories.  
+Orders table shows all the orders placed. 
+
+How to use-
+After login, please select a year to view data for a particular year. User can select a category to view sub-categories in the pie chart. User can filter, sort, change pagination in the orders table.
+
 ## Development server
 
 Run `npm run server` to start the NodeJS server which serves as backend.
