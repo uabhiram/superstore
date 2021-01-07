@@ -14,7 +14,6 @@ import {
   selectOrderTotal,
   areOrdersLoaded,
   selectOrdersError,
-  selectOrdersTable,
   selectSliceOrders,
 } from '../dashboard.selectors';
 import { MatPaginator } from '@angular/material/paginator';

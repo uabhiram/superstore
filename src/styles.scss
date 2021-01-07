@@ -1,4 +1,6 @@
 @import "~@angular/material/theming";
+@import "./assets/scss/global-variables.scss";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 @include mat-core();
 

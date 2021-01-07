@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve  --proxy-config ./proxy.json",
     "server": "ts-node -P ./server/server.tsconfig.json ./server/server.ts",
+    "run": "npm run server",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

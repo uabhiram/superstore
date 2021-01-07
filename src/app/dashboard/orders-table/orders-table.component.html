@@ -99,7 +99,7 @@
             [attr.colspan]="displayedColumns.length"
           >
             <ng-container *ngIf="!(error$ | async) && !loading">
-              <span class="dc-content">No Customers</span>
+              <span class="dc-content">No Orders</span>
             </ng-container>
             <ng-container *ngIf="(error$ | async) && !loading">
               <span class="dc-label">System Failure</span>
@@ -134,8 +134,8 @@
 
       <mat-paginator
         [length]="OrdersTotal"
-        [pageSize]="10"
-        [pageSizeOptions]="[10, 100, 500]"
+        [pageSize]="5"
+        [pageSizeOptions]="[5, 10]"
       ></mat-paginator>
     </div>
   </div>

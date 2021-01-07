@@ -72,7 +72,7 @@
         color: $blue-wood-color !important;
         background-color: $catskill-white-color;
         letter-spacing: 0.3px;
-        justify-content: center;
+        
       }
 
       td.mat-cell {
@@ -80,4 +80,27 @@
       }
     }
   }
+}
+
+.dc-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dc-content {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.dc-content-sm {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.dc-content-sm-semibold {
+  @extend .dc-content-sm;
+  font-weight: 600;
 }
