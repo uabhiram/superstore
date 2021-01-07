@@ -1,0 +1,56 @@
+<mat-card>
+  <form #form="ngForm">
+    <h4>Year in Focus:</h4>
+    <mat-form-field>
+      <mat-label>Select Year</mat-label>
+      <mat-select
+        [(ngModel)]="yearSelected"
+        name="year"
+        (selectionChange)="getSelectedValue()"
+      >
+        <mat-option *ngFor="let year of years" [value]="year">
+          {{ year }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</mat-card>
+<div class="grid-container" *ngIf ="displayCharts">
+  <mat-grid-list cols="{{ (cardLayout | async)?.columns }}" rowHeight="200px">
+    <mat-grid-tile
+      *ngFor="let mc of miniCardData"
+      [colspan]="(cardLayout | async)?.miniCard.cols"
+      [rowspan]="(cardLayout | async)?.miniCard.rows"
+    >
+      <app-mini-card
+        [title]="mc?.title"
+        [value]="mc?.value"
+        [isCurrency]="mc?.isCurrency"
+      ></app-mini-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.chart.cols"
+      [rowspan]="(cardLayout | async)?.chart.rows"
+    >
+      <app-card>
+        <app-bar-chart [events]="eventsSubject.asObservable()"></app-bar-chart>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.chart.cols"
+      [rowspan]="(cardLayout | async)?.chart.rows"
+    >
+      <app-card>
+        <app-pie-chart [events]="eventsSubject.asObservable()"></app-pie-chart>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile
+      [colspan]="(cardLayout | async)?.table.cols"
+      [rowspan]="(cardLayout | async)?.table.rows"
+    >
+      <app-card>
+        <app-orders-table></app-orders-table>
+      </app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

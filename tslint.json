@@ -10,6 +10,7 @@
         "statements"
       ]
     },
+    "@typescript-eslint/no-empty-interface": "off",
     "array-type": false,
     "arrow-return-shorthand": true,
     "curly": true,

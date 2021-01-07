@@ -1,0 +1,15 @@
+<mat-card class="dashboard-card">
+  <mat-card-header class="card-header">
+    <mat-card-title>
+        <div *ngIf="isCurrency">
+      <h1 class="value-text" >
+        {{ value | currency: "$":"symbol":"0.0" }}
+      </h1>
+    </div>
+    <div *ngIf="!isCurrency">
+      <h1 class="value-text" >{{ value }}</h1>
+    </div>
+    </mat-card-title>
+  </mat-card-header>
+  <h3 class="title-text">{{ title }}</h3>
+</mat-card>

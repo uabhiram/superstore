@@ -1,0 +1,31 @@
+<div class="row">
+  <form #form="ngForm">
+    <mat-form-field>
+      <mat-label>Select Category</mat-label>
+      <mat-select
+        [(ngModel)]="categorySelected"
+        name="category"
+        (selectionChange)="getSelectedValue()"
+      >
+        <mat-option
+          *ngFor="let category of loadCategories$ | async"
+          [value]="category"
+        >
+          {{ category }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+<div class="chartContainer">
+  <canvas
+    baseChart
+    [data]="pieChartData"
+    [labels]="pieChartLabels"
+    [chartType]="pieChartType"
+    [colors]="pieChartColors"
+    [options]="pieChartOptions"
+    [legend]="pieChartLegend"
+  >
+  </canvas>
+</div>
