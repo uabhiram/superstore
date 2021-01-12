@@ -9,8 +9,8 @@ import {
   Router,
 } from '@angular/router';
 import { AppState } from './shared/reducers';
-import { isLoggedIn, isLoggedOut } from './dashboard/auth/auth.selectors';
-import { login, logout } from './dashboard/auth/auth.actions';
+import { isLoggedIn, isLoggedOut } from './auth/auth.selectors';
+import { login, logout } from './auth/auth.actions';
 
 @Component({
   selector: 'app-root',

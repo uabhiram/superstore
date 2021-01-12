@@ -6,7 +6,7 @@ import {
 } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AppState } from '../../shared/reducers';
+import { AppState } from '../shared/reducers';
 import { select, Store } from '@ngrx/store';
 import { isLoggedIn } from './auth.selectors';
 import { tap } from 'rxjs/operators';
