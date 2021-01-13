@@ -1,9 +1,9 @@
 <mat-sidenav-container fullscreen>
   <mat-sidenav #start>
     <mat-nav-list (click)="start.close()">
-      <a mat-list-item routerLink="/courses">
-        <mat-icon>library_books</mat-icon>
-        <span>Courses</span>
+      <a mat-list-item routerLink="/dashboard">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
       </a>
 
       <a mat-list-item routerLink="/login" *ngIf="isLoggedOut$ | async">
