@@ -80,7 +80,7 @@ export const selectGetYears = createSelector(selectAllOrders, (state) =>
     .filter(
       (value: any, index: any, self: string | any[]) =>
         self.indexOf(value) === index
-    )
+    ).sort()
 );
 export const selectYear = createSelector(
   selectAllOrders,
